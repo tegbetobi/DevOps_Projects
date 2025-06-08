@@ -29,9 +29,9 @@ $ sudo apt update
 
 $ sudo apt install apache2
 ```
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 120549.png)
+![Alt text](imgs/image2.png)
 
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 120601.png)
+![Alt text](imgs/image3.png)
 
 ```
 #starting apache2 Server
@@ -43,27 +43,27 @@ $ systemctl enable apache2
 #checking status
 $ systemctl status apache2
 ```
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 120657.png)
+![Alt text](imgs/image4.png)
 
 ## Configure Security Group
 
 When we initially created our instance a default TCP rule on port 22 was opened. This is what we used for the ssh connection. We would need to open TCP port 80 in order for us to have a connection to the internet
 
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 120951.png)
+![Alt text](imgs/image5.png)
 
 We can check our web application
 
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 121401.png)
+![Alt text](imgs/image6.png)
 
 ## Installing MySQL and PHP
 
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 121550.png)
+![Alt text](imgs/image7.png)
 
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 121721.png)
+![Alt text](imgs/image8.png)
 
 Check PHP version
 
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 121752.png)
+![Alt text](imgs/image9.png)
 
 Here we create a new directory called projectlampstack inside the /var/www/ directory.
 sudo mkdir /var/www/projectstack
@@ -72,7 +72,7 @@ The we change permissions of the projectstack directory to the current user syst
 
 sudo chown -R $USER:$USER /var/www/projectstack
 
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 121921.png)
+![Alt text](imgs/image9.png)
 
 
 The projectstack directory represents the directory which will contains files related to our website. In order to spin up this server block we need to configure it by creating a .conf file.
@@ -81,7 +81,7 @@ sudo vi /etc/apache2/sites-available/projectstack.conf
 
 The following represents the configuration needed to spin up the server block.
 
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 125135.png)
+![Alt text](imgs/image10.png)
 
 Run the following to activate the server
 
@@ -91,11 +91,11 @@ sudo a2dissite 000-default # to deactivate the default webserver
 
 sudo systemctl reload apache2
 ```
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 125156.png)
+![Alt text](imgs/image11.png)
 
 Create an index.html file inside the /var/www/projectstack
 
 Go to the browser and open the webpage ```http://<public_ip_address>:80```
 
-![Alt text](LAMP Stack\imgs\Screenshot 2025-06-08 125214.png)
+![Alt text](imgs/image12.png)
 
