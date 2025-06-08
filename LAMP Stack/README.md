@@ -13,7 +13,7 @@ PHP: represents the programming language
 ## Create EC2 Instances
 Log on to the AWS console and create an EC2 Ubuntu VM instance. 
 
-![Alt text](LAMP Stack\imgs\1 (1).png)
+![Alt text](LAMP Stack/imgs/1 (1).png)
 
 
 Connect to the machine using
